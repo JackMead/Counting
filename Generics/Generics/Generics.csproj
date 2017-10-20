@@ -42,6 +42,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CountableItems\Apple.cs" />
+    <Compile Include="CountableItems\Box.cs" />
+    <Compile Include="CountableItems\Cart.cs" />
+    <Compile Include="CountableItems\Container.cs" />
+    <Compile Include="Counter.cs" />
+    <Compile Include="ICountable.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
