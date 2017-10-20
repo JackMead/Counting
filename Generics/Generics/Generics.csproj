@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CountableItems\Apple.cs" />
+    <Compile Include="CountableItems\BagOfApples.cs" />
     <Compile Include="CountableItems\Box.cs" />
     <Compile Include="CountableItems\Cart.cs" />
     <Compile Include="CountableItems\Container.cs" />

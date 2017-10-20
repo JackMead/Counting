@@ -10,11 +10,6 @@ namespace Generics.CountableItems
     {
         protected List<T> listOfItems;
 
-        protected Container()
-        {
-            listOfItems= new List<T>();
-        }
-
         public int Count()
         {
             return listOfItems.Sum(countable => countable.Count());

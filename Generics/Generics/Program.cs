@@ -46,6 +46,11 @@ namespace Generics
             boxCounter.Add(smallBox);
             boxCounter.Add(massiveBox);
             Console.WriteLine("Our box counter found there were a total of "+boxCounter.Count+" items in the small and massive boxes combined");
+
+            var listOfBagsOfApples = new List<ICountable> {new BagOfApples(), new BagOfApples(), new BagOfApples()};
+            var boxOfBagsOfApples = new Box<ICountable>(listOfBagsOfApples);
+            Console.WriteLine("A box full of bags of apples has {0} items in!",boxOfBagsOfApples.Count());
+
         }
     }
 }
