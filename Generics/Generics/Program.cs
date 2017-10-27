@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 using Generics.CountableItems;
@@ -37,6 +38,14 @@ namespace Generics
             var appleCounter = new Counter<Apple>();
             appleCounter.Add(new Apple());
             Console.WriteLine("A single apple has a count of " + appleCounter.Count);
+            //HERE WE ONLY COUNT RED APPLES
+            var redAppleCounter = new Counter<Apple>((apple) => ((Apple) apple).Colour == "Red" ? true : false);
+            redAppleCounter.Add(new Apple());
+            redAppleCounter.Add(new Apple());
+            redAppleCounter.Add(new Apple());
+            Console.WriteLine("We had {0} red apples in that bunch", redAppleCounter.Count);
+
+
 
             var cartCounter = new Counter<Cart<ICountable>>();
             cartCounter.Add(cart);
@@ -51,6 +60,7 @@ namespace Generics
             var boxOfBagsOfApples = new Box<ICountable>(listOfBagsOfApples);
             Console.WriteLine("A box full of bags of apples has {0} items in!",boxOfBagsOfApples.Count());
 
+            
         }
     }
 }
